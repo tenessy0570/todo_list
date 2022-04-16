@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script src="assets/js/vue.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="todo">
+
+        <div id="create-note-book">
+            <div id="add-new-note">
+                <a href="#" v-on:click="showCreationForm"><img src="assets/img/note_book.png" alt="Добавить блокнот"></a>
+                <fieldset v-if="isAddingNewNoteBook">
+                    <input type="text" name="" id="" placeholder="Название блокнота" v-model="newNoteBookName">
+                    <button v-on:click="submitNewNotebook">Добавить</button>
+                </fieldset>
+            </div>
+            <a href="#" v-on:click="deleteSelectedNotes"><img src="assets/img/delete.png" alt="Удалить выбранные задачи"></a>
+            <template v-else></template>
+        </div>
+
+        <note-book
+        v-for="noteBook in noteBooks"
+        v-bind:note-book="noteBook"
+        v-bind:key="noteBook.id"
+        ></note-book>
+
+    </div>
+</body>
+</html>

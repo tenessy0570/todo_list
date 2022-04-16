@@ -1,0 +1,72 @@
+* {
+    padding: 2px;
+    margin: 0;
+}
+
+img[alt="Добавить блокнот"],
+img[alt="Добавить задачу"],
+img[alt="Удалить выбранные задачи"] {
+    height: 3vw;
+}
+
+fieldset {
+    display: inline-block;
+}
+
+#todo {
+    margin: 0 auto;
+    width: 600px;
+}
+
+#create-note-book {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note-book {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    padding: 3px;
+    border: 1px solid black;
+    margin-bottom: 1px;
+}
+
+fieldset {
+    border: none;
+}
+
+.to-delete {
+    text-decoration: line-through;
+}
+
+.note-book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note-book-header img, .note img {
+    height: 2vw;
+}
+
+.note-book-header > div {
+    display: flex;
+    align-items: center;
+}
+
+.note-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input:checked + label {
+    text-decoration: line-through;
+}
